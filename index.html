@@ -254,6 +254,8 @@
                     <option value="all">🌊 Semua Gelombang</option>
                     <option value="Gelombang 1">Gelombang 1</option>
                     <option value="Gelombang 2">Gelombang 2</option>
+					<option value="Gelombang 3">Gelombang 3</option>
+					<option value="Gelombang 4">Gelombang 4</option>
                 </select>
             </div>
         </div>
@@ -281,7 +283,7 @@
     </div>
 
     <div class="footer">
-        <p>🔄 Auto-refresh setiap 30 detik | Data langsung dari Google Form TKA Utama Kab. Sampang</p>
+        <p>🔄 Auto-refresh setiap 30 detik | Data langsung dari Google Form TKA Utama SD Kab. Sampang</p>
     </div>
 </div>
 
@@ -435,6 +437,7 @@
         const binaan = filteredData.filter(d => d.status === "Binaan").length;
         const sesi1 = filteredData.filter(d => d.sesi === "Sesi 1").length;
         const sesi2 = filteredData.filter(d => d.sesi === "Sesi 2").length;
+		const sesi3 = filteredData.filter(d => d.sesi === "Sesi 3").length;
         const kecamatan = new Set(filteredData.map(d => d.kecamatan)).size;
         
         document.getElementById('statsGrid').innerHTML = `
@@ -445,6 +448,7 @@
 			<div class="stat-card"><div class="stat-number">${gelombang4}</div><div class="stat-label">Gelombang 4</div></div>
             <div class="stat-card"><div class="stat-number">${sesi1}</div><div class="stat-label">Sesi 1</div></div>
             <div class="stat-card"><div class="stat-number">${sesi2}</div><div class="stat-label">Sesi 2</div></div>
+            <div class="stat-card"><div class="stat-number">${sesi3}</div><div class="stat-label">Sesi 3</div></div>
             <div class="stat-card"><div class="stat-number">${kecamatan}</div><div class="stat-label">Kecamatan</div></div>
         `;
     }
