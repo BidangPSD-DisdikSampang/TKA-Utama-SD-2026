@@ -429,6 +429,8 @@
         const total = filteredData.length;
         const gelombang1 = filteredData.filter(d => d.gelombang === "Gelombang 1").length;
         const gelombang2 = filteredData.filter(d => d.gelombang === "Gelombang 2").length;
+		const gelombang3 = filteredData.filter(d => d.gelombang === "Gelombang 3").length;
+		const gelombang4 = filteredData.filter(d => d.gelombang === "Gelombang 4").length;
         const mandiri = filteredData.filter(d => d.status === "Mandiri").length;
         const binaan = filteredData.filter(d => d.status === "Binaan").length;
         const sesi1 = filteredData.filter(d => d.sesi === "Sesi 1").length;
@@ -439,8 +441,8 @@
             <div class="stat-card"><div class="stat-number">${total}</div><div class="stat-label">Total Laporan</div></div>
             <div class="stat-card"><div class="stat-number">${gelombang1}</div><div class="stat-label">Gelombang 1</div></div>
             <div class="stat-card"><div class="stat-number">${gelombang2}</div><div class="stat-label">Gelombang 2</div></div>
-            <div class="stat-card"><div class="stat-number">${mandiri}</div><div class="stat-label">Status Mandiri</div></div>
-            <div class="stat-card"><div class="stat-number">${binaan}</div><div class="stat-label">Status Binaan</div></div>
+			<div class="stat-card"><div class="stat-number">${gelombang3}</div><div class="stat-label">Gelombang 3</div></div>
+			<div class="stat-card"><div class="stat-number">${gelombang4}</div><div class="stat-label">Gelombang 4</div></div>
             <div class="stat-card"><div class="stat-number">${sesi1}</div><div class="stat-label">Sesi 1</div></div>
             <div class="stat-card"><div class="stat-number">${sesi2}</div><div class="stat-label">Sesi 2</div></div>
             <div class="stat-card"><div class="stat-number">${kecamatan}</div><div class="stat-label">Kecamatan</div></div>
