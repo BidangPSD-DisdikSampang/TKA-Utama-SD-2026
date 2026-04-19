@@ -274,7 +274,7 @@
         </h3>
         <table>
             <thead>
-                <tr><th>No</th><th>Timestamp</th><th>NPSN</th><th>Kecamatan</th><th>Status</th><th>Gelombang</th><th>Hari, Tanggal</th><th>Sesi</th><th>Foto</th></tr>
+                <tr><th>No</th><th>Timestamp</th><th>Lembaga</th><th>Kecamatan</th><th>Status</th><th>Gelombang</th><th>Hari, Tanggal</th><th>Sesi</th><th>Foto</th></tr>
             </thead>
             <tbody id="tableBody">
                 <tr><td colspan="9" class="loading">Memuat data dari Google Spreadsheet...</td></tr>
@@ -334,13 +334,13 @@
     // Fallback data
     function useFallbackData() {
         laporanData = [
-            { timestamp: "2026-04-17 16:24:00", npsn: "20528500", kecamatan: "Torjun", status: "Mandiri", gelombang: "Gelombang 2", hariTanggal: "Kamis, 23 April 2026", sesi: "Sesi 2", foto: "https://drive.google.com/open?id=1OMaKsg7Xj3PL17cGeK8Ydx-6O8nLfHIb" },
-            { timestamp: "2026-04-16 21:03:06", npsn: "20528470", kecamatan: "Sampang", status: "Mandiri", gelombang: "Gelombang 1", hariTanggal: "Selasa, 21 April 2026", sesi: "Sesi 2", foto: "https://drive.google.com/open?id=1ba22ibVbyg03yd12jFBshWF4sHA_w3zH" },
-            { timestamp: "2026-04-16 20:59:09", npsn: "20986767", kecamatan: "Robatal", status: "Mandiri", gelombang: "Gelombang 1", hariTanggal: "Senin, 20 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=1oSlHIJ-hVkF4NkGHsFm8qLlQkfn6LNsi" },
-            { timestamp: "2026-04-15 14:30:00", npsn: "20528512", kecamatan: "Sampang", status: "Binaan", gelombang: "Gelombang 1", hariTanggal: "Rabu, 22 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=example1" },
-            { timestamp: "2026-04-15 10:15:00", npsn: "20528488", kecamatan: "Torjun", status: "Mandiri", gelombang: "Gelombang 2", hariTanggal: "Kamis, 23 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=example2" },
-            { timestamp: "2026-04-14 09:45:00", npsn: "20528492", kecamatan: "Robatal", status: "Binaan", gelombang: "Gelombang 2", hariTanggal: "Jumat, 24 April 2026", sesi: "Sesi 2", foto: "https://drive.google.com/open?id=example3" },
-            { timestamp: "2026-04-14 08:30:00", npsn: "20528505", kecamatan: "Omben", status: "Mandiri", gelombang: "Gelombang 1", hariTanggal: "Senin, 20 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=example4" }
+            { timestamp: "2026-04-17 16:24:00", lembaga: "20528500", kecamatan: "Torjun", status: "Mandiri", gelombang: "Gelombang 2", hariTanggal: "Kamis, 23 April 2026", sesi: "Sesi 2", foto: "https://drive.google.com/open?id=1OMaKsg7Xj3PL17cGeK8Ydx-6O8nLfHIb" },
+            { timestamp: "2026-04-16 21:03:06", lembaga: "20528470", kecamatan: "Sampang", status: "Mandiri", gelombang: "Gelombang 1", hariTanggal: "Selasa, 21 April 2026", sesi: "Sesi 2", foto: "https://drive.google.com/open?id=1ba22ibVbyg03yd12jFBshWF4sHA_w3zH" },
+            { timestamp: "2026-04-16 20:59:09", lembaga: "20986767", kecamatan: "Robatal", status: "Mandiri", gelombang: "Gelombang 1", hariTanggal: "Senin, 20 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=1oSlHIJ-hVkF4NkGHsFm8qLlQkfn6LNsi" },
+            { timestamp: "2026-04-15 14:30:00", lembaga: "20528512", kecamatan: "Sampang", status: "Binaan", gelombang: "Gelombang 1", hariTanggal: "Rabu, 22 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=example1" },
+            { timestamp: "2026-04-15 10:15:00", lembaga: "20528488", kecamatan: "Torjun", status: "Mandiri", gelombang: "Gelombang 2", hariTanggal: "Kamis, 23 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=example2" },
+            { timestamp: "2026-04-14 09:45:00", lembaga: "20528492", kecamatan: "Robatal", status: "Binaan", gelombang: "Gelombang 2", hariTanggal: "Jumat, 24 April 2026", sesi: "Sesi 2", foto: "https://drive.google.com/open?id=example3" },
+            { timestamp: "2026-04-14 08:30:00", lembaga: "20528505", kecamatan: "Omben", status: "Mandiri", gelombang: "Gelombang 1", hariTanggal: "Senin, 20 April 2026", sesi: "Sesi 1", foto: "https://drive.google.com/open?id=example4" }
         ];
         updateKecamatanFilterOptions();
         applyFilters();
@@ -463,7 +463,7 @@
                     <tr>
                         <td>${idx + 1}</td>
                         <td>${item.timestamp}</td>
-                        <td><strong>${item.npsn}</strong></td>
+                        <td><strong>${item.lembaga}</strong></td>
                         <td>${item.kecamatan}</td>
                         <td><span class="badge-status ${item.status === 'Mandiri' ? 'badge-mandiri' : 'badge-binaan'}">${item.status}</span></td>
                         <td><span class="badge-gelombang">${item.gelombang}</span></td>
